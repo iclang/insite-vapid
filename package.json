@@ -1,0 +1,11 @@
+{
+  "name": "insite-vapid",
+  "vapid": {
+  },
+  "scripts": {
+    "start": "vapid start ."
+  },
+  "dependencies": {
+    "vapid-cli": "^0.1.23"
+  }
+}
