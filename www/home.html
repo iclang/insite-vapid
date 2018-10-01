@@ -1,0 +1,189 @@
+<!-- <cfset pagetitle="">
+<cfsavecontent variable="openGraphMeta">
+	<cfoutput>
+		<meta property="og:title" content="#pagetitle#"/>
+		<meta property="og:type" content="company"/>
+		<meta property="og:url" content="#variables.SiteURL#"/>
+		<meta property="og:image" content="http://#CGI.HTTP_HOST#/images/insite_logo.gif"/>
+		<meta property="og:site_name" content="Insite"/>
+		<meta property="og:description" content="Insite is a Dallas-based digital agency with expertise in digital strategy, website design, custom web development, mobile app development and WordPress."/>
+	</cfoutput>
+</cfsavecontent> -->
+
+{{> header}}
+
+	{{#section home_hero}}
+	<div class="banner">
+		<h1 class="pagetitle" id="homeBannerTitle">
+			{{pagetitle}}
+		</h1>
+		
+		{{#section pagetitles label="Home Hero Pagetitles" sortable=true}}
+		<div class="alt_pagetitle visuallyhidden">{{title type=html editor=false help="Make sure to add a single line-break (&lt;br /&gt;) for the last word"}}</div>
+		{{/section}}
+		
+		<div class="sub_pagetitle">
+			{{sub_pagetitle type=html editor=markdown}}
+		</div>
+		<p>
+			<a href="/contact" class="button" style="background:#fff">Start a Conversation</a>
+		</p>
+		<!--- <h1 class="pagetitle">
+			Celebrating 18 Years
+		</h1>
+		<p class="sub_pagetitle">
+			Thanks to the clients and team members that have been a part of our growth&nbsp;and&nbsp;success.
+		</p> --->
+	</div><!--! end of .banner -->
+	{{/section}}
+
+	<div id="home">
+
+		<!-- Project Previews -->
+		<div class="proj_previews">
+			<h1 class="visuallyhidden">
+				Recent Projects
+			</h1>
+			<ul>
+				<li>
+					<a href="/work/customized-communications-inc.cfm">
+						<img src="/img/home/home-project-preview-cci.jpg" height="312" width="434" alt="Customized Communications, Inc. Website" />
+						<span class="name">Customized Communications, Inc. <span class="proj">E-commerce Website &amp; Education Portal</span></span>
+					</a>
+				</li>
+				<li>
+					<a href="/work/national-scouting-museum.cfm">
+						<img src="/img/home/home-project-preview-national-scouting-museum.jpg" height="312" width="434" alt="The National Scouting Museum" />
+						<span class="name">The National Scouting Museum <span class="proj">Responsive Website</span></span>
+					</a>
+				</li>
+				<li>
+					<a href="/work/iuh-goshen-health.cfm">
+						<img src="/img/home/home-project-preview-iuh.jpg" height="312" width="433" alt="Indiana University Health Goshen" />
+						<span class="name">Goshen Health <span class="proj">Content Strategy &amp; Custom Architecture</span></span>
+					</a>
+				</li>
+			</ul>
+		</div><!--! end of .proj_previews -->
+
+		<!-- Client Logos -->
+		<!--- div class="temp_birthday_content_move">
+			<h1>
+				Solutions that Speak
+			</h1>
+			<p>
+				In this digital age, technology propels communication to new levels. By staying at the forefront of technology, Insite takes our clients&rsquo; businesses to new levels by improving their ability to communicate&nbsp;effectively.
+			</p>
+		</div --->
+
+		<div class="home_body_copy">
+			<!--- <h1>
+				We Build Trust
+			</h1> --->
+			<p>
+				Insite is a digital agency located in Dallas, Texas. Since 1998, we have been creating custom web and software solutions for our clients. Our team is small but mighty&mdash;20 people with a passion for our work and a desire to innovate. From <a href="/work/ut-southwestern.cfm">healthcare</a>, <a href="/work/jackRogers.cfm">fashion</a>, <a href="/work/crsmith.cfm">museums</a> to <a href="/work/pureSculpture.cfm" style="white-space:nowrap;">e-commerce</a> and <a href="/work/myth.cfm">technology</a>&mdash;our experience knows no&nbsp;limits. 
+			</p>
+		</div>
+
+
+		<div class="client_logos">
+			<h1>
+				A few of our clients
+			</h1>
+			<ul>
+				<li>
+					<img src="/img/clients/cisco.png" height="174" width="330" alt="Cisco" />
+				</li>
+				<li>
+					<img src="/img/clients/fossil.png" height="114" width="330" alt="Fossil" />
+				</li>
+				<li>
+					<img src="/img/clients/daltile.png" height="140" width="330" alt="Daltile" />
+				</li>
+				<li>
+					<img src="/img/clients/lucchese.png" alt="Lucchese" />
+				</li>
+				<li>
+					<img src="/img/clients/weirs.png" alt="Weirs" />
+				</li>
+				<li>
+					<img src="/img/clients/smu.png" height="115" width="330" alt="SMU" />
+				</li>
+				<li>
+					<img src="/img/clients/cooper.png" height="64" width="330" alt="Cooper Aerobics" />
+				</li>
+				<li>
+					<img src="/img/clients/NSM.png" alt="The National Scouting Museum" />
+				</li>
+			</ul>
+			<p>
+				<a href="/work/" class="button">See Our Work</a>
+			</p>
+		</div><!--! end of .client_logos -->
+
+
+		<!-- "Around the Office" Photos -->
+		<div class="gallery">
+			<h1 class="visuallyhidden">
+				Around the Office
+			</h1>
+			<ul>
+				<li>
+					<a href="http://www.instagram.com/insitedallas" target="_blank">
+						<img src="/img/home/home_gallery_1.jpg" height="640" width="640" alt="Rex" />
+					</a>
+				</li>
+				<li>
+					<a href="http://www.instagram.com/insitedallas" target="_blank">
+						<img src="/img/home/home_gallery_3.jpg" height="640" width="640" alt="Insite Anniversary" />
+					</a>
+				</li>
+				<li>
+					<a href="http://www.instagram.com/insitedallas" target="_blank">
+						<img src="/img/home/home_gallery_2.jpg" height="640" width="640" alt="Insite Team Photo" />
+					</a>
+				</li>
+				<li>
+					<a href="http://www.instagram.com/insitedallas" target="_blank">
+						<img src="/img/home/home_gallery_4.jpg" height="640" width="640" alt="Insite Anniversary" />
+					</a>
+				</li>
+				<li>
+					<a href="http://www.instagram.com/insitedallas" target="_blank">
+						<img src="/img/home/home_gallery_5.jpg" height="640" width="640" alt="Bren Montgomery" />
+					</a>
+				</li>
+				<li>
+					<a href="http://www.instagram.com/insitedallas" target="_blank">
+						<img src="/img/home/home_gallery_6.jpg" height="640" width="640" alt="Insite Anniversary Coffee Mug" />
+					</a>
+				</li>
+				<li>
+					<a href="http://www.instagram.com/insitedallas" target="_blank">
+						<img src="/img/home/home_gallery_7.jpg" height="456" width="456" alt="Evan's Toys" />
+					</a>
+				</li>
+				<li>
+					<a href="http://www.instagram.com/insitedallas" target="_blank">
+						<img src="/img/home/home_gallery_8.jpg" height="640" width="640" alt="Gabrielle and Cali" />
+					</a>
+				</li>
+				<li>
+					<a href="http://www.instagram.com/insitedallas" target="_blank">
+						<img src="/img/home/home_gallery_9.jpg" height="612" width="612" alt="Boomer - The Chief Office Dog" />
+					</a>
+				</li>
+				<li class="aboutUs">
+					<a href="/about/"><img src="/img/home_aboutUs_link.png" height="260" width="260" alt="About Us" /></a>
+				</li>
+			</ul>
+			<p class="aboutUs">
+				<a href="/about/" class="button">Meet the Team</a>
+			</p>
+		</div><!--! end of .client_logos -->
+
+	</div><!--! end of #home -->
+
+	
+
+{{> footer}}
