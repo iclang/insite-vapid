@@ -1,10 +1,6 @@
 {
-  "name": "insite-vapid",
+  "name": "insite",
   "vapid": {
-    "database": {
-      "dialect": "postgresql",
-      "use_env_variable": "postgres://fuffephehcnact:8e1b6483e1ec2c883820a93da1313e87c52cad9b7e15b57e112043a527aab6f7@ec2-54-243-147-162.compute-1.amazonaws.com:5432/d14ttm5t8efm23"
-    }
   },
   "scripts": {
     "start": "vapid start ."

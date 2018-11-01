@@ -1,0 +1,93 @@
+<!-- <cfset pagetitle="Dallas Web Design and Development | Dallas Digital Agency | Insite">
+<cfset metaDescription="At Insite, we work with some amazing clients to develop the right digital solution. Let us help solve your ecommerce, website or mobile app development project.">
+<cfsavecontent variable="openGraphMeta">
+	<cfoutput>
+		<meta property="og:title" content="#pagetitle#"/>
+		<meta property="og:type" content="company"/>
+		<meta property="og:url" content="#variables.SiteURL#"/>
+		<meta property="og:image" content="http://#CGI.HTTP_HOST#/images/insite_logo.gif"/>
+		<meta property="og:site_name" content="Insite"/>
+		<meta property="og:description" content=""/>
+	</cfoutput>
+</cfsavecontent> -->
+
+{{> header1}}
+	<title>
+		{{#section seo_page_title label="SEO Page Titles" multiple=true limit=1 offset=2}}
+			{{pagetitle type=text}}
+		{{/section}}
+	</title>
+	<!-- <cfif NOT IsDefined("metaDescription") OR IsDefined("metaDescription") AND metaDescription IS "">
+		<meta name="description" content="Insite is a Dallas-based digital agency with expertise in digital strategy, website design, custom web development, mobile app development and WordPress.">
+	<cfelse>
+		<meta name="description" content="<cfoutput>#metaDescription#</cfoutput>">
+	</cfif> -->
+
+	<!-- Open Graph Meta Tags for Facebook -->
+	<!-- <cfif IsDefined("openGraphMeta") AND openGraphMeta IS NOT ""><cfoutput>#openGraphMeta#</cfoutput></cfif> -->
+{{> header2}}
+
+	
+{{#section about_landing}}
+	<div class="banner">
+		<h1 class="pagetitle">
+			{{pagetitle type=text}}
+		</h1>
+	</div><!--! end of .banner -->
+
+	<div id="about">
+		<style>
+			@import url("//hello.myfonts.net/count/2BD8C2");
+			@font-face {font-family: 'Mexcellent-Regular';src: url('/webfonts/mexcellent/2BD8C2_0_0.eot');src: url('/webfonts/mexcellent/2BD8C2_0_0.eot?#iefix') format('embedded-opentype'),url('/webfonts/mexcellent/2BD8C2_0_0.woff') format('woff'),url('/webfonts/mexcellent/2BD8C2_0_0.ttf') format('truetype'),url('/webfonts/mexcellent/2BD8C2_0_0.svg#wf') format('svg');}
+		</style>
+		<div class="two_col_copy">
+			<!-- <p> -->
+				<!-- <span class="dropcap">O</span>perating since 1998, Insite quickly became one of the area&rsquo;s leading digital agencies. Our <a href="/work/">award-winning portfolio</a> of work probably has something to do with it. But so do our relationships. Our <a href="/work/">clients</a> are our partners. As a result, we get a healthy dose of repeat business and long-term projects from these symbiotic relationships. -->
+				{{intro_copy_1 label="Intro Copy (Left Side)" type=html}}
+			<!-- </p> -->
+			<!-- <p> -->
+				{{intro_copy_2 label="Intro Copy (Right Side)" type=html}}
+				<!-- Motivated by a passion for what we do, we stay sharp by constantly challenging ourselves, learning new skills, and sharing information. We keep each other updated about the latest trends and technologies through our monthly springboard sessions. But it&rsquo;s not all work, all the time. We do know when to play and how to get our hands dirty, whether we&rsquo;re planting trees in our community or putting our foosball table to good use. -->
+			<!-- </p> -->
+		</div>
+{{/section}}
+
+
+		<div id="team">
+			<ul>
+				<li class="title">
+					<h1>
+						Our Team
+					</h1>
+				</li>
+				{{#section about multiple=true sortable=true}}
+				<li>
+					<a href="{{_permalink}}">
+						<img src="{{photo_thumbnail type=image tag=false}}" alt="{{name type=text}} {{last_name type=text}}" />
+						<span class="person">
+							<span class="name">{{name type=text}} <span class="last">{{last_name type=text}}</span></span>
+							<span class="title">{{job_title type=text}}</span>
+						</span>
+					</a>
+				</li>
+				{{/section}}
+			</ul>
+		</div><!--! end of .team -->
+
+		<div class="mission">
+			<h1 class="visuallyhidden">
+				Our Mission
+			</h1>
+			<div class="icon">
+				<img src="/img_2014/icon_lightbulb.png" alt="" />
+			</div>
+			<p>
+				Our mission is to humanize technology to contribute to and keep up with an evolving world. We understand technology&mdash;we use it, believe in it, speak its language. And we stay current with the latest technologies so our clients won&rsquo;t&nbsp;have&nbsp;to. 
+			</p>
+		</div><!--! end of .mission -->
+
+	</div><!--! end of #about -->
+
+	
+
+{{> footer}}

@@ -10,12 +10,26 @@
 	</cfoutput>
 </cfsavecontent> -->
 
-{{> header}}
+{{> header1}}
+	<title>
+		{{#section seo_page_title label="SEO Page Titles" multiple=true limit=1 offset=0}}
+			{{pagetitle type=text}}
+		{{/section}}
+	</title>
+	<!-- <cfif NOT IsDefined("metaDescription") OR IsDefined("metaDescription") AND metaDescription IS "">
+		<meta name="description" content="Insite is a Dallas-based digital agency with expertise in digital strategy, website design, custom web development, mobile app development and WordPress.">
+	<cfelse>
+		<meta name="description" content="<cfoutput>#metaDescription#</cfoutput>">
+	</cfif> -->
+
+	<!-- Open Graph Meta Tags for Facebook -->
+	<!-- <cfif IsDefined("openGraphMeta") AND openGraphMeta IS NOT ""><cfoutput>#openGraphMeta#</cfoutput></cfif> -->
+{{> header2}}
 
 	{{#section home_hero}}
 	<div class="banner">
 		<h1 class="pagetitle" id="homeBannerTitle">
-			{{pagetitle}}
+			{{initial_pagetitle help="The other pagetitles that are looped through are added in HOME HERO PAGETITLES in the left navigation."}}
 		</h1>
 		
 		{{#section pagetitles label="Home Hero Pagetitles" sortable=true}}
@@ -26,7 +40,7 @@
 			{{sub_pagetitle type=html editor=markdown}}
 		</div>
 		<p>
-			<a href="/contact" class="button" style="background:#fff">Start a Conversation</a>
+			<a href="/contact" class="button" style="background:#fff">{{call_to_action_button_text type=text}}</a>
 		</p>
 		<!--- <h1 class="pagetitle">
 			Celebrating 18 Years
@@ -76,14 +90,14 @@
 			</p>
 		</div --->
 
+		{{#section home_body_copy}}
 		<div class="home_body_copy">
 			<!--- <h1>
 				We Build Trust
 			</h1> --->
-			<p>
-				Insite is a digital agency located in Dallas, Texas. Since 1998, we have been creating custom web and software solutions for our clients. Our team is small but mighty&mdash;20 people with a passion for our work and a desire to innovate. From <a href="/work/ut-southwestern.cfm">healthcare</a>, <a href="/work/jackRogers.cfm">fashion</a>, <a href="/work/crsmith.cfm">museums</a> to <a href="/work/pureSculpture.cfm" style="white-space:nowrap;">e-commerce</a> and <a href="/work/myth.cfm">technology</a>&mdash;our experience knows no&nbsp;limits. 
-			</p>
+			{{home_body_copy type=html}}
 		</div>
+		{{/section}}
 
 
 		<div class="client_logos">
@@ -91,30 +105,11 @@
 				A few of our clients
 			</h1>
 			<ul>
+				{{#section client_logos sortable=true limit=8}}
 				<li>
-					<img src="/img/clients/cisco.png" height="174" width="330" alt="Cisco" />
+					<img src="{{logo type=image tag=false}}" height="174" width="330" alt="{{logo_alt type=text}}" />
 				</li>
-				<li>
-					<img src="/img/clients/fossil.png" height="114" width="330" alt="Fossil" />
-				</li>
-				<li>
-					<img src="/img/clients/daltile.png" height="140" width="330" alt="Daltile" />
-				</li>
-				<li>
-					<img src="/img/clients/lucchese.png" alt="Lucchese" />
-				</li>
-				<li>
-					<img src="/img/clients/weirs.png" alt="Weirs" />
-				</li>
-				<li>
-					<img src="/img/clients/smu.png" height="115" width="330" alt="SMU" />
-				</li>
-				<li>
-					<img src="/img/clients/cooper.png" height="64" width="330" alt="Cooper Aerobics" />
-				</li>
-				<li>
-					<img src="/img/clients/NSM.png" alt="The National Scouting Museum" />
-				</li>
+				{{/section}}
 			</ul>
 			<p>
 				<a href="/work/" class="button">See Our Work</a>

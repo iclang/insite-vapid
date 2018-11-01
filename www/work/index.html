@@ -1,0 +1,337 @@
+<!-- <cfset pagetitle="Dallas Web Design and Development | Dallas Digital Agency | Insite">
+<cfset metaDescription="At Insite, we work with some amazing clients to develop the right digital solution. Let us help solve your ecommerce, website or mobile app development project.">
+<cfsavecontent variable="openGraphMeta">
+	<cfoutput>
+		<meta property="og:title" content="#pagetitle#"/>
+		<meta property="og:type" content="company"/>
+		<meta property="og:url" content="#variables.SiteURL#"/>
+		<meta property="og:image" content="http://#CGI.HTTP_HOST#/images/insite_logo.gif"/>
+		<meta property="og:site_name" content="Insite"/>
+		<meta property="og:description" content=""/>
+	</cfoutput>
+</cfsavecontent> -->
+
+{{> header1}}
+	<title>
+		{{#section seo_page_title label="SEO Page Titles" multiple=true limit=1 offset=2}}
+			{{pagetitle type=text}}
+		{{/section}}
+	</title>
+	<!-- <cfif NOT IsDefined("metaDescription") OR IsDefined("metaDescription") AND metaDescription IS "">
+		<meta name="description" content="Insite is a Dallas-based digital agency with expertise in digital strategy, website design, custom web development, mobile app development and WordPress.">
+	<cfelse>
+		<meta name="description" content="<cfoutput>#metaDescription#</cfoutput>">
+	</cfif> -->
+
+	<!-- Open Graph Meta Tags for Facebook -->
+	<!-- <cfif IsDefined("openGraphMeta") AND openGraphMeta IS NOT ""><cfoutput>#openGraphMeta#</cfoutput></cfif> -->
+{{> header2}}
+
+
+
+	{{#section work_landing}}
+		<div class="banner">
+			<h1 class="pagetitle">
+				{{pagetitle type=text}}
+			</h1>
+		</div><!--! end of .banner -->
+
+		<div id="work">
+			
+			<div class="featured clearfix">
+				<figure>
+					<a href="#">
+						<picture>
+							<!--[if IE 9]><video style="display: none;"><![endif]-->
+							<source srcset="">
+							<!--[if IE 9]></video><![endif]-->
+							<img srcset="" alt="">
+						</picture>
+					</a>
+				</figure>
+				<figcaption class="visuallyhidden">
+					
+				</figcaption>
+				<a href="#">
+					<h1>
+						
+					</h1>
+					<h2>
+						
+					</h2>
+					<p class="desc">
+						
+					</p>
+				</a>
+				<p>
+					<a href="#" class="button">Project Details</a>
+				</p>
+			</div><!--! end of .featured -->
+			<script>
+			var featuredImgPath   = '/img_2014/work/';
+			var featuredImgExt    = '.jpg';
+			var featuredImgExtAt2x = '@2x.jpg';
+			var featuredProjs = [
+				/*{
+					"Client":"Jack Rogers",
+					"Tagline":"Fashionable Footwear, Fashionable Website",
+					"Desc":"Responsive E-commerce Website",
+					"Link":"jackRogers.cfm",
+					"Alt":"Jack Rogers Website",
+					"Images":"jack-rogers-website-feature"
+				},*/
+				{
+					"Client":"The National Scouting Museum",
+					"Tagline":"Heritage and tradition come to life",
+					"Desc":"Responsive Website",
+					"Link":"national-scouting-museum.cfm",
+					"Alt":"The National Scouting Museum",
+					"Images":"national-scouting-museum-feature"
+				},
+				{
+					"Client":"Indiana University Health Goshen",
+					"Tagline":"Taking proactive care to the digital world",
+					"Desc":"Responsive Website",
+					"Link":"iuh-goshen-health.cfm",
+					"Alt":"Indiana University Health Goshen",
+					"Images":"iuh-goshen-health-website-feature"
+				},
+				{
+					"Client":"Customized Communications, Inc.",
+					"Tagline":"A fresh approach for design and usability",
+					"Desc":"Responsive E-commerce Website",
+					"Link":"customized-communications-inc.cfm",
+					"Alt":"Customized Communications, Inc.",
+					"Images":"customized-communications-inc-website-feature"
+				},
+				{
+					"Client":"Myth Innovations",
+					"Tagline":"Portable, personal, the perfect partners.",
+					"Desc":"MiWorld Mobile App",
+					"Link":"myth.cfm",
+					"Alt":"Myth Innovations",
+					"Images":"myth-innovations-app-feature"
+				},
+				{
+					"Client":"Pure Sculpture",
+					"Tagline":"Custom Sculptures, Custom E-commerce",
+					"Desc":"Responsive E-commerce Website",
+					"Link":"pureSculpture.cfm",
+					"Alt":"Pure Sculpture Website",
+					"Images":"pure-sculpture-website-feature"
+				},
+				{
+					"Client":"Daltile",
+					"Tagline":"Inspiration at your fingertips",
+					"Desc":"Gallery Touch Screen Application",
+					"Link":"daltileGallery.cfm",
+					"Alt":"Daltile Gallery Touch Screen",
+					"Images":"daltile-gallery-feature"
+				},
+				{
+					"Client":"C.R. Smith Museum",
+					"Tagline":"Spreading wings with modern design and usability",
+					"Desc":"Responsive Website",
+					"Link":"crsmith.cfm",
+					"Alt":"C.R. Smith Museum Website",
+					"Images":"cr-smith-museum-website-feature"
+				},
+				{
+					"Client":"UT Southwestern Peter O&rsquo;Donnell Jr. Brain Institute Website",
+					"Tagline":"Driving discovery of the next frontier",
+					"Desc":"Responsive Website",
+					"Link":"ut-southwestern.cfm",
+					"Alt":"UT Southwestern Peter O&rsquo;Donnell Jr. Brain Institute Website",
+					"Images":"utsw-odonnell-brain-institute-feature"
+				}
+			];
+			</script>
+
+
+			<div class="portfolio">
+				<ul>
+					<li>
+						<a href="ut-southwestern.cfm">
+							<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="/img_2014/work/thumb_utsw-odonnell-brain-institute.jpg, /img_2014/work/thumb_utsw-odonnell-brain-institute@2x.jpg 2x">
+								<!--[if IE 9]></video><![endif]-->
+								<img srcset="/img_2014/work/thumb_utsw-odonnell-brain-institute.jpg, /img_2014/work/thumb_utsw-odonnell-brain-institute@2x.jpg 2x" alt="UT Southwestern Peter O&rsquo;Donnell Jr. Brain Institute Website">
+							</picture>
+							<span class="name">UT Southwestern Peter O&rsquo;Donnell Jr. Brain Institute Website</span>
+							<br />
+							<span class="project">Responsive Website</span>
+						</a>
+					</li>
+					<li>
+						<a href="national-scouting-museum.cfm">
+							<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="/img_2014/work/thumb_nsm.jpg, /img_2014/work/thumb_nsm@2x.jpg 2x">
+								<!--[if IE 9]></video><![endif]-->
+								<img srcset="/img_2014/work/thumb_nsm.jpg, /img_2014/work/thumb_nsm@2x.jpg 2x" alt="The National Scouting Museum">
+							</picture>
+							<span class="name">The National Scouting Museum</span>
+							<br />
+							<span class="project">Responsive Website</span>
+						</a>
+					</li>
+					<li>
+						<a href="iuh-goshen-health.cfm">
+							<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="/img_2014/work/thumb_IUH.jpg, /img_2014/work/thumb_IUH@2x.jpg 2x">
+								<!--[if IE 9]></video><![endif]-->
+								<img srcset="/img_2014/work/thumb_IUH.jpg, /img_2014/work/thumb_IUH@2x.jpg 2x" alt="Indiana University Health Goshen">
+							</picture>
+							<span class="name">Indiana University Health Goshen</span>
+							<br />
+							<span class="project">Responsive Website</span>
+						</a>
+					</li>
+					<li>
+						<a href="customized-communications-inc.cfm">
+							<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="/img_2014/work/thumb_cci.jpg, /img_2014/work/thumb_cci@2x.jpg 2x">
+								<!--[if IE 9]></video><![endif]-->
+								<img srcset="/img_2014/work/thumb_cci.jpg, /img_2014/work/thumb_cci@2x.jpg 2x" alt="Customized Communications, Inc.">
+							</picture>
+							<span class="name">Customized Communications, Inc.</span>
+							<br />
+							<span class="project">Responsive E-Commerce Website</span>
+						</a>
+					</li>
+					<li>
+						<a href="crsmith.cfm">
+							<!-- <img src="/img_2014/work/thumb_pureSculpture2.png" alt="Pure Sculpture" /> -->
+							<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="/img_2014/work/thumb_crsmith.jpg, /img_2014/work/thumb_crsmith@2x.jpg 2x">
+								<!--[if IE 9]></video><![endif]-->
+								<img srcset="/img_2014/work/thumb_crsmith.jpg, /img_2014/work/thumb_crsmith@2x.jpg 2x" alt="C.R. Smith Museum">
+							</picture>
+							<span class="name">C.R. Smith Museum</span>
+							<br />
+							<span class="project">Responsive Website</span>
+						</a>
+					</li>
+					<li>
+						<a href="pureSculpture.cfm">
+							<!-- <img src="/img_2014/work/thumb_pureSculpture2.png" alt="Pure Sculpture" /> -->
+							<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="/img_2014/work/thumb_pureSculpture2.png, /img_2014/work/thumb_pureSculpture2@2x.png 2x">
+								<!--[if IE 9]></video><![endif]-->
+								<img srcset="/img_2014/work/thumb_pureSculpture2.png, /img_2014/work/thumb_pureSculpture2@2x.png 2x" alt="Pure Sculpture">
+							</picture>
+							<span class="name">Pure Sculpture</span>
+							<br />
+							<span class="project">Responsive E-commerce Website</span>
+						</a>
+					</li>
+					<li>
+						<a href="myth.cfm">
+							<!-- <img src="../img_2014/work/thumb_myth2.png" height="476" width="476" alt="Myth Innovations" /> -->
+							<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="/img_2014/work/thumb_myth2.png, /img_2014/work/thumb_myth2@2x.png 2x">
+								<!--[if IE 9]></video><![endif]-->
+								<img srcset="/img_2014/work/thumb_myth2.png, /img_2014/work/thumb_myth2@2x.png 2x" alt="Myth Innovations">
+							</picture>
+							<span class="name">Myth Innovations</span>
+							<br />
+							<span class="project">MiWorld Mobile App</span>
+						</a>
+					</li>
+					<li>
+						<a href="jackRogers.cfm">
+							<!-- <img src="/img_2014/work/thumb_jackRogers2.jpg" data-at2x="/img_2014/work/thumv_jackRogers2@2x.jpg" alt="Jack Rogers" /> -->
+							<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="/img_2014/work/thumb_jackRogers2.png, /img_2014/work/thumb_jackRogers2@2x.png 2x">
+								<!--[if IE 9]></video><![endif]-->
+								<img srcset="/img_2014/work/thumb_jackRogers2.png, /img_2014/work/thumb_jackRogers2@2x.png 2x" alt="Jack Rogers">
+							</picture>
+							<span class="name">Jack Rogers</span>
+							<br />
+							<span class="project">Responsive E-commerce Website</span>
+						</a>
+					</li>
+					<li>
+						<a href="daltileGallery.cfm">
+							<!-- <img src="/img_2014/work/thumb_daltileGallery2.png" alt="Daltile" /> -->
+							<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="/img_2014/work/thumb_daltileGallery2.png, /img_2014/work/thumb_daltileGallery2@2x.png 2x">
+								<!--[if IE 9]></video><![endif]-->
+								<img srcset="/img_2014/work/thumb_daltileGallery2.png, /img_2014/work/thumb_daltileGallery2@2x.png 2x" alt="Daltile">
+							</picture>
+							<span class="name">Daltile</span>
+							<br />
+							<span class="project">Gallery Touch Screen Application</span>
+						</a>
+					</li>
+					<li>
+						<a href="transformationBootcamp.cfm">
+							<!-- <img src="/img_2014/work/thumb_tbc2.jpg" alt="Transformation Bootcamp" /> -->
+							<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="/img_2014/work/thumb_tbc2.jpg, /img_2014/work/thumb_tbc2@2x.jpg 2x">
+								<!--[if IE 9]></video><![endif]-->
+								<img srcset="/img_2014/work/thumb_tbc2.jpg, /img_2014/work/thumb_tbc2@2x.jpg 2x" alt="Transformation Bootcamp">
+							</picture>
+							<span class="name">Transformation Bootcamp</span>
+							<br />
+							<span class="project">Responsive Website</span>
+						</a>
+					</li>
+					<li>
+						<a href="dfwConnected.cfm">
+							<!-- <img src="/img_2014/work/thumb_dfw.jpg" alt="DFW Airport" /> -->
+							<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="/img_2014/work/thumb_dfw2.jpg, /img_2014/work/thumb_dfw2@2x.jpg 2x">
+								<!--[if IE 9]></video><![endif]-->
+								<img srcset="/img_2014/work/thumb_dfw2.jpg, /img_2014/work/thumb_dfw2@2x.jpg 2x" alt="DFW Airport">
+							</picture>
+							<span class="name">DFW Airport</span>
+							<br />
+							<span class="project">Intranet</span>
+						</a>
+					</li>
+				</ul>
+			</div><!--! end of .portfolio -->
+	{{/section}}
+
+			<div class="clients client_logos">
+				<h1>
+					clients we&rsquo;ve worked&nbsp;with
+				</h1>
+				<ul>
+					{{#section client_logos sortable=true}}
+					<li>
+						<img src="{{logo type=image tag=false}}" height="174" width="330" alt="{{logo_alt type=text}}" />
+					</li>
+					{{/section}}
+				</ul>
+			</div><!--! end of .clients -->
+	
+
+			<div class="CTA">
+				<img src="/img_2014/icon_dialogs.png" alt="" class="icon" />
+				<p class="copy">
+					Our next award-winning project could be yours!
+				</p>
+				<p>
+					<!--- <a href="#contact" class="button scrollTo openContact">Let&rsquo;s Get Started</a
+					> --->
+					<a href="/contact/" class="button">Let&rsquo;s Get Started</a>
+				</p>
+			</div><!--! end of .CTA -->
+
+		</div><!--! end of #work -->
+	
+	
+
+{{> footer}}
